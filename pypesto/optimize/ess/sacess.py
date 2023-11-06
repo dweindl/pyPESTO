@@ -207,6 +207,11 @@ class SacessOptimizer:
             tmp_result_filename = SacessWorker.get_temp_result_filename(
                 worker_idx, self._tmpdir
             )
+            self._logger.log(
+                logging.DEBUG,
+                f"Trying to read from {tmp_result_filename} (cwd: {os.getcwd()}).",
+            )
+
             try:
                 tmp_result = read_result(
                     tmp_result_filename, problem=False, optimize=True
@@ -472,6 +477,11 @@ class SacessWorker:
         ess_results = pypesto.Result(problem=problem)
 
         while self._keep_going():
+            self._logger.log(
+                logging.DEBUG,
+                f"Worker {self._worker_idx} entering main loop.",
+            )
+
             # run standard ESS
             ess, cur_ess_results = self._run_ess(
                 refset=refset,
@@ -486,12 +496,22 @@ class SacessWorker:
                 ess_results.optimize_result.list[:50]
             )
             if self._tmp_result_file:
+                self._logger.log(
+                    logging.DEBUG,
+                    f"Worker {self._worker_idx} writing results to {self._tmp_result_file} (cwd: {os.getcwd()}).",
+                )
+
                 write_result(
                     ess_results,
                     self._tmp_result_file,
                     overwrite=True,
                     optimize=True,
                 )
+                if not Path(self._tmp_result_file).exists():
+                    raise AssertionError(
+                        f"Result file {self._tmp_result_file} not written."
+                    )
+
             # check if the best solution of the last local ESS is sufficiently
             # better than the sacess-wide best solution
             self.maybe_update_best(ess.x_best, ess.fx_best)
@@ -537,6 +557,11 @@ class SacessWorker:
             )
 
             i_iter += 1
+
+        self._logger.log(
+            logging.DEBUG,
+            f"Worker {self._worker_idx} exited main loop.",
+        )
 
     def _run_ess(
         self,
