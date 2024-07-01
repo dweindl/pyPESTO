@@ -3,7 +3,7 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
-import petab
+import petab.v1
 import petab_select
 import pytest
 from more_itertools import one

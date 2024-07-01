@@ -1,7 +1,7 @@
 from pathlib import Path
 
 import numpy as np
-import petab
+import petab.v1
 import pytest
 
 import pypesto

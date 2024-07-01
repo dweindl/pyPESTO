@@ -11,7 +11,7 @@ from collections.abc import Sequence
 
 import numpy as np
 import pandas as pd
-import petab
+import petab.v1
 import roadrunner
 from petab.C import (
     LIN,

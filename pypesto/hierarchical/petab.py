@@ -3,7 +3,7 @@
 from typing import Literal
 
 import pandas as pd
-import petab
+import petab.v1
 import sympy as sp
 from more_itertools import one
 from petab.C import (
