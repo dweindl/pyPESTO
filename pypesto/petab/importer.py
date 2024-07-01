@@ -19,7 +19,7 @@ from typing import (
 
 import numpy as np
 import pandas as pd
-import petab.v1
+import petab.v1 as petab
 from petab.v1.C import (
     ESTIMATE,
     NOISE_PARAMETERS,

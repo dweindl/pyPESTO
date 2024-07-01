@@ -4,7 +4,7 @@ import logging
 from collections.abc import Iterable
 
 import pandas as pd
-import petab.v1
+import petab.v1 as petab
 import petab_select.ui
 from petab.v1.C import ESTIMATE, NOMINAL_VALUE
 from petab_select import Model, parameter_string_to_value

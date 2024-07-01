@@ -19,7 +19,7 @@ from .parameter import RelativeInnerParameter
 
 try:
     import amici
-    import petab
+    import petab.v1 as petab
     from petab.v1.C import (
         ESTIMATE,
         LOWER_BOUND,

@@ -7,7 +7,7 @@ from collections.abc import Sequence
 from typing import Optional
 
 import numpy as np
-import petab.v1
+import petab.v1 as petab
 import roadrunner
 from petab.v1.parameter_mapping import ParMappingDictQuadruple
 
