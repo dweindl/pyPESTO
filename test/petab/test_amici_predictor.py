@@ -8,7 +8,7 @@ import amici
 import libsbml
 import numpy as np
 import pandas as pd
-import petab.v1
+import petab.v1 as petab
 import pytest
 
 import pypesto

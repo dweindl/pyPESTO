@@ -9,7 +9,7 @@ import unittest
 import amici
 import benchmark_models_petab as models
 import numpy as np
-import petab.v1
+import petab.v1 as petab
 import petabtests
 import pytest
 
