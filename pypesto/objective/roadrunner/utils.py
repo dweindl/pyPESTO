@@ -13,7 +13,7 @@ import numpy as np
 import pandas as pd
 import petab.v1
 import roadrunner
-from petab.C import (
+from petab.v1.C import (
     LIN,
     MEASUREMENT,
     NOISE_DISTRIBUTION,

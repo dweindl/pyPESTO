@@ -12,7 +12,7 @@ from .base_parameter import InnerParameter
 try:
     import amici
     import petab
-    from petab.C import OBSERVABLE_ID, TIME
+    from petab.v1.C import OBSERVABLE_ID, TIME
 except ImportError:
     pass
 

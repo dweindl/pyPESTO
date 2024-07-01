@@ -31,7 +31,7 @@ from .parameter import SplineInnerParameter
 try:
     import amici
     import petab
-    from petab.C import (
+    from petab.v1.C import (
         ESTIMATE,
         LOWER_BOUND,
         NOISE_PARAMETERS,

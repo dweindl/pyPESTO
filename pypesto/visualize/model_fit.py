@@ -17,7 +17,7 @@ import numpy as np
 import petab.v1
 from amici.petab.conditions import fill_in_parameters
 from amici.petab.simulations import rdatas_to_simulation_df
-from petab.visualize import plot_problem
+from petab.v1.visualize import plot_problem
 
 from ..C import CENSORED, ORDINAL, RDATAS, SEMIQUANTITATIVE
 from ..objective import (

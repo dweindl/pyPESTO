@@ -6,7 +6,7 @@ import pandas as pd
 import petab.v1
 import sympy as sp
 from more_itertools import one
-from petab.C import (
+from petab.v1.C import (
     ESTIMATE,
     LIN,
     NOISE_PARAMETERS,
@@ -15,9 +15,9 @@ from petab.C import (
     OBSERVABLE_TRANSFORMATION,
     PARAMETER_SEPARATOR,
 )
-from petab.C import LOWER_BOUND as PETAB_LOWER_BOUND
-from petab.C import UPPER_BOUND as PETAB_UPPER_BOUND
-from petab.observables import get_formula_placeholders
+from petab.v1.C import LOWER_BOUND as PETAB_LOWER_BOUND
+from petab.v1.C import UPPER_BOUND as PETAB_UPPER_BOUND
+from petab.v1.observables import get_formula_placeholders
 
 from ..C import (
     CENSORING_BOUNDS,

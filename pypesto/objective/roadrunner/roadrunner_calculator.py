@@ -9,7 +9,7 @@ from typing import Optional
 import numpy as np
 import petab.v1
 import roadrunner
-from petab.parameter_mapping import ParMappingDictQuadruple
+from petab.v1.parameter_mapping import ParMappingDictQuadruple
 
 from ...C import (
     FVAL,

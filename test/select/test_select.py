@@ -7,7 +7,7 @@ import petab.v1
 import petab_select
 import pytest
 from more_itertools import one
-from petab.C import NOMINAL_VALUE
+from petab.v1.C import NOMINAL_VALUE
 from petab_select import (
     ESTIMATE,
     PETAB_PROBLEM,
