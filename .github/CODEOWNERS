@@ -1,7 +1,7 @@
 # see https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
 
 # default owners = active maintainers
-* @Doresic @PaulJonasJost @vwiela
+* @ICB-DCM/pypesto-maintainers
 
 # Examples
 /doc/example/censored_data.ipynb @Doresic
